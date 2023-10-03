@@ -8,10 +8,16 @@ import { PhotoService } from '../services/photo.service';
 })
 export class Tab2Page {
 
-  constructor(public photoservice: PhotoService) {}
+  constructor(
+    public photoservice: PhotoService
+    ) {}
 
   public addPhotoToGallery() {
     this.photoservice.addNewToGallery();
+  }
+
+  public get photos() {
+    return this.photoservice.photos;
   }
 
 }
